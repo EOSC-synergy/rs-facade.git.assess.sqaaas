@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    git.man.poznan.pl/stash/scm/eosc-rs/rs-facade:
+      branch: master
+      repo: https://git.man.poznan.pl/stash/scm/eosc-rs/rs-facade.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-saffron-cichlid.sh
+        container: qc.acc_wiggy-grey-capuchin
+  QC.Doc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-cinnabar-burmese.sh
+        container: qc.doc_cloudy-indigo-camel
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-cornflower-gharial.sh
+        container: qc.doc_snoopy-tangerine-crane
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-pink-capybara.sh
+        container: qc.doc_snazzy-plum-octopus
+  QC.Lic:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-razzmatazz-budgerigar.sh
+        container: qc.lic_ready-malachite-macaw
+  QC.Sec:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-ecru-bear.sh
+        container: qc.sec_freaky-sapphire-vulture
+  QC.Sty:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-lavender-tamarin.sh
+        container: qc.sty_sunny-smalt-frise
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-amethyst-dane.sh
+        container: qc.sty_scaly-crimson-iguana
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-denim-spitz.sh
+        container: qc.sty_smelly-chocolate-hedgehog
+  QC.Ver:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/rs-facade get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-champagne-corgi.sh
+        container: qc.ver_jumpy-chestnut-bullfrog
+timeout: 5400
