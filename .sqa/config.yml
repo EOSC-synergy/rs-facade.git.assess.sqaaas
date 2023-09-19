@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade git:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-alizarin-dane.sh
-        container: qc.acc_squeaky-rust-eel
+        - /usr/bin/env sh .sqa/script.stealthy-goldenrod-markhor.sh
+        container: qc.acc_woozy-celadon-mayfly
   QC.Doc:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-ultramarine-fish.sh
-        container: qc.doc_baggy-grey-chamois
+        - /usr/bin/env sh .sqa/script.tacky-periwinkle-kangaroo.sh
+        container: qc.doc_lousy-chestnut-dunker
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade git:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-auburn-drever.sh
-        container: qc.doc_queasy-platinum-dunker
+        - /usr/bin/env sh .sqa/script.skanky-platinum-urchin.sh
+        container: qc.doc_bumpy-magnolia-cuttlefish
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-grey-clam.sh
-        container: qc.doc_baggy-chartreuse-paradise
+        - /usr/bin/env sh .sqa/script.droopy-periwinkle-coati.sh
+        container: qc.doc_seedy-dandelion-eleuth
   QC.Lic:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-goldenrod-gharial.sh
-        container: qc.lic_homely-aquamarine-warthog
+        - /usr/bin/env sh .sqa/script.boozy-eggplant-havanese.sh
+        container: qc.lic_gummy-denim-corgi
   QC.Met:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-zucchini-antelope.sh
-        container: qc.met_wiggy-thistle-tuatara
+        - /usr/bin/env sh .sqa/script.chummy-beige-owl.sh
+        container: qc.met_shabby-rose-gecko
   QC.Sec:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-charcoal-tzu.sh
-        container: qc.sec_gimpy-mustard-kiwi
+        - /usr/bin/env sh .sqa/script.beady-sapphire-hyena.sh
+        container: qc.sec_woolly-plum-affenpinscher
   QC.Sty:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-razzmatazz-dugong.sh
-        container: qc.sty_woozy-amethyst-numbat
+        - /usr/bin/env sh .sqa/script.wimpy-flax-dachshund.sh
+        container: qc.sty_messy-bistre-tuatara
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-cobalt-deer.sh
-        container: qc.sty_woozy-cinnamon-harrier
+        - /usr/bin/env sh .sqa/script.gimpy-chartreuse-cuttlefish.sh
+        container: qc.sty_cheeky-celadon-whale
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-grey-gar.sh
-        container: qc.sty_boozy-black-drever
+        - /usr/bin/env sh .sqa/script.crabby-tan-caiman.sh
+        container: qc.sty_goopy-malachite-pinscher
   QC.Ver:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/rs-facade get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-cerulean-axolotl.sh
-        container: qc.ver_lanky-ruby-hamster
+        - /usr/bin/env sh .sqa/script.clammy-aquamarine-butterfly.sh
+        container: qc.ver_sunny-gold-birman
 timeout: 5400
